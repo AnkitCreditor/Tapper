@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/css/login.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
   <div class="overlay"></div>
@@ -25,24 +26,17 @@
         </div>
 
         <!-- Login Form -->
-        <form id="loginForm" class="form active" method="POST" action="/login">
-          <input type="text" name="emailOrUsername" placeholder="Email or Username" required />
+        <form id="loginForm" class="form active">
+          <input type="email" name="email" placeholder="Email" required />
           <input type="password" name="password" placeholder="Password" required />
           <a href="#" class="forgot">Forgot Password?</a>
           <button type="submit" class="submit-btn">Login</button>
           <p class="switch-msg">Not registered? <span id="switchToSignup">Sign Up</span></p>
-
-          <div class="google-login">
-            <button type="button" class="google-btn" onclick="window.location='/auth/google'">
-              <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" class="google-logo" />
-              Continue with Google
-            </button>
-          </div>
+          <div id="googleLoginBtnLogin" class="google-login"></div>
         </form>
 
-
         <!-- Signup Form -->
-        <form id="signupForm" class="form" method="POST" action="/signup">
+        <form id="signupForm" class="form">
           <input type="text" name="firstName" placeholder="First Name" required />
           <input type="text" name="lastName" placeholder="Last Name" required />
           <input type="email" name="email" placeholder="Email ID" required />
@@ -52,13 +46,7 @@
           <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
           <button type="submit" class="submit-btn">Sign Up</button>
           <p class="switch-msg">Already registered? <span id="switchToLogin">Login</span></p>
-
-          <div class="google-login">
-            <button type="button" class="google-btn" onclick="window.location='/auth/google'">
-              <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" class="google-logo" />
-              Continue with Google
-            </button>
-          </div>
+          <div id="googleLoginBtnSignup" class="google-login"></div>
         </form>
       </div>
     </div>
@@ -90,5 +78,45 @@
     switchToLogin.onclick = loginToggle.onclick;
   </script>
 
+  <script>
+    function handleGoogleCredentialResponse(response) {
+      fetch("http://localhost:5000/api/auth/google", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token: response.credential }),
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.token) {
+          alert("Logged in with Google!");
+          localStorage.setItem("token", data.token);
+          window.location.href = "/index.html";
+        } else {
+          alert("Google login failed");
+        }
+      })
+      .catch(err => console.error("Google login error:", err));
+    }
+
+    window.onload = function () {
+  google.accounts.id.initialize({
+    client_id: "1034690129058-df89so41binpegc09j15v1gb6u3cloik.apps.googleusercontent.com",
+    callback: handleGoogleCredentialResponse,
+  });
+
+  google.accounts.id.renderButton(
+    document.getElementById("googleLoginBtnLogin"),
+    { theme: "outline", size: "large", width: "100%" }
+  );
+
+  google.accounts.id.renderButton(
+    document.getElementById("googleLoginBtnSignup"),
+    { theme: "outline", size: "large", width: "100%" }
+  );
+};
+
+  </script>
+
+  <script src="assets/js/auth.js"></script>
 </body>
 </html>
