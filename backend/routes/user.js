@@ -18,6 +18,14 @@ function authMiddleware(req, res, next) {
     }
 }
 
+// Admin Middleware - checks if user has admin role
+function adminMiddleware(req, res, next) {
+    if (req.user.role !== 'admin') {
+        return res.status(403).json({ msg: 'Access denied. Admin privileges required.' });
+    }
+    next();
+}
+
 // @route   GET /api/user/profile
 // @desc    Get user profile
 // @access  Private
@@ -49,6 +57,19 @@ router.put('/profile', authMiddleware, async (req, res) => {
         res.json(updatedUser);
     } catch (err) {
         console.error('Update Profile Error:', err.message);
+        res.status(500).send('Server error');
+    }
+});
+
+// @route   GET /api/user/all
+// @desc    Get all users (Admin only)
+// @access  Private/Admin
+router.get('/all', authMiddleware, adminMiddleware, async (req, res) => {
+    try {
+        const users = await User.find().select('-password');
+        res.json(users);
+    } catch (err) {
+        console.error('Get All Users Error:', err.message);
         res.status(500).send('Server error');
     }
 });
