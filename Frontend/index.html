@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from quomodosoft.com/html/nictorys/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Apr 2025 06:24:34 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="irstheme">
+
+    <title> Nictorys - Factory & Industrial HTML Template </title>
+    
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/slick-theme.css" rel="stylesheet">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Add this inside <head> if not already included -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray(".service-card").forEach((card, i) => {
+    gsap.from(card, {
+        scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+        toggleActions: "play none none none"
+        },
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        ease: "power3.out",
+        delay: i * 0.1
+    });
+    });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+
+        <!-- start preloader -->
+        <div class="preloader">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <!-- end preloader -->
+
+        
+        <!-- Start header -->
+        <header id="header" class="site-header header-style-2">
+            
+            <nav class="navigation navbar navbar-default" style="background-color: #1e0f04; position: fixed; top: 0; width: 100%; z-index: 999;">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
+                        <button class="close-navbar"><i class="ti-close"></i></button>
+                        <ul class="nav navbar-nav">
+                            
+                            <li><a href="#">Home</a></li>
+                            
+                             
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about">About</a></li>
+                             
+                            <li><a href="#test">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div><!-- end of nav-collapse -->
+
+                    <div class="search-contact">
+                        <div class="header-search-form-wrapper">
+                            <button class="search-toggle-btn"><i class="ti-search"></i></button>
+                            <div class="header-search-form">
+                                <form>
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="Search here...">
+                                        <button type="submit"><i class="ti-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="contact-btn">
+                            <a href="login.html" class="theme-btn">Login</a>
+                        </div>
+                    </div>
+                </div><!-- end of container -->
+            </nav>
+        </header>
+        <!-- end of header -->
+
+
+        <!-- start of hero -->
+        <section class="hero-slider hero-style-2" style="margin-top: 100px;">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-inner slide-bg-image" data-background="https://img.freepik.com/premium-photo/corporate-business-workers-shoot_53876-10465.jpg?w=826">
+                            <div class="container">
+                                <div data-swiper-parallax="300" class="slide-title">
+                                    <h2><span>Unearthing the   </span> <br>value within</h2>
+                                </div>
+                                <div data-swiper-parallax="400" class="slide-text">
+                                    <p>Helping private business owners and ambitious individuals tap into the gold that already exists within them.</p>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div data-swiper-parallax="500" class="slide-btns">
+                                    <a href="#" class="theme-btn">Connect Now!</a> 
+                                </div>
+                            </div>
+                        </div> <!-- end slide-inner --> 
+                    </div> <!-- end swiper-slide -->
+
+                    <div class="swiper-slide">
+                        <div class="slide-inner slide-bg-image" data-background="https://img.freepik.com/free-photo/dynamic-data-visualization-3d_23-2151904314.jpg?t=st=1744875428~exp=1744879028~hmac=566d9093cae55821350bb0d18a606a6617bff33fbc020f4b9162377c04c045aa&w=900">
+                            <div class="container">
+                                <div data-swiper-parallax="300" class="slide-title">
+                                    <h2><span>Unearthing the   </span> <br>value within</h2>
+                                </div>
+                                <div data-swiper-parallax="400" class="slide-text">
+                                    <p>Helping private business owners and ambitious individuals tap into the gold that already exists within them.</p>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div data-swiper-parallax="500" class="slide-btns">
+                                    <a href="#" class="theme-btn">Connect Now!</a>  
+                                </div>
+                            </div>
+                        </div> <!-- end slide-inner --> 
+                    </div> <!-- end swiper-slide -->
+
+                    <div class="swiper-slide">
+                        <div class="slide-inner slide-bg-image" data-background=" https://img.freepik.com/premium-photo/success-achievement-negotiate-deal-business-people-shake-hands-cooperate-investment-business-close-up-handshake-businessmen-with-stock-market-graph-forex-data_28629-2035.jpg?w=996">
+                            <div class="container">
+                                <div data-swiper-parallax="300" class="slide-title">
+                                    <h2><span>Unearthing the   </span> <br>value within</h2>
+                                </div>
+                                <div data-swiper-parallax="400" class="slide-text">
+                                    <p>Helping private business owners and ambitious individuals tap into the gold that already exists within them.</p>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div data-swiper-parallax="500" class="slide-btns">
+                                    <a href="#" class="theme-btn">Connect Now!</a> 
+                                   
+                                </div>
+                            </div>
+                        </div> <!-- end slide-inner --> 
+                    </div><!-- end swiper-slide --> 
+                </div>
+                <!-- end swiper-wrapper -->
+
+                <!-- swipper controls -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+        <!-- end of hero slider -->
+
+        <section class="features-section-s2-modern">
+        <div class="container">
+            <div class="features-wrapper">
+            <div class="feature-card" style="--delay: 0.1s;">
+                <img src="assets/images/features/01.png" alt="Feature 1">
+                <h3>01. Professional Accountability</h3>
+                <p>Build self-trust and ownership. Improve time management and productivity.</p>
+            </div>
+            <div class="feature-card" style="--delay: 0.2s;">
+                <img src="assets/images/features/02.png" alt="Feature 2">
+                <h3>02. Goal Setting & Planning</h3>
+                <p>Define measurable goals and clear action steps. Break objectives into milestones.</p>
+            </div>
+            <div class="feature-card" style="--delay: 0.3s;">
+                <img src="assets/images/features/03.png" alt="Feature 3">
+                <h3>03. Regular Check-Ins</h3>
+                <p>Daily, weekly, or monthly progress tracking. Calls, emails, messages, and meetings.</p>
+            </div>
+            <div class="feature-card" style="--delay: 0.4s;">
+                <img src="assets/images/features/04.png" alt="Feature 4">
+                <h3>04. Support & Motivation</h3>
+                <p>One-on-one coaching and strategic help to overcome roadblocks with encouragement.</p>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- end features-section-s2 -->
+
+        
+        <!-- start about-us-section-s2 -->
+        <section class="about-us-section-s2 section-padding p-t-0 " id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-5">
+                        <div class="img-holder about-image">
+                            <img src="https://img.freepik.com/free-photo/entrepreneur-man-brainstorming-management-strategy-working-hard-meeting-office_482257-8165.jpg?t=st=1744876293~exp=1744879893~hmac=5e6f72134364c12fbafce1b6fed9d6ee5ce1abb46fa7c3d82165cf3d1611d0c2&w=740" alt>
+                        </div>
+                    </div>
+                    <div class="col col-md-7">
+                        <div class="about-details">
+                            <div class="section-title">
+                                <span>About us</span>
+                                <h2>Uncovering Gold   <span>in Every Business</span></h2>
+                            </div>
+                            <div class="details">
+                                <p>At Tapper Light Solutions, we believe you’re already sitting on a Gold Mine—your business,  </strong>  your vision, your potential. Our mission is to help you dig deep, uncover the value within, and turn it into measurable success.</p>
+                                <ul>
+                                    <li><i class="ti-arrow-circle-right"></i> Unlock Your Hidden Potential</li>
+                                    <li><i class="ti-arrow-circle-right"></i> Deep Expertise Meets Real Experience </li>
+                                    <li><i class="ti-arrow-circle-right"></i> Rooted in Business from Day One  </li>
+                                    <li><i class="ti-arrow-circle-right"></i> Your Success is Our Focus </li>
+                                </ul>
+                            </div>
+                            <div class="ceo-quote">
+                                <blockquote>
+                                    This isn’t about us. It’s about you, and helping you strike gold in your business and personal development journey.
+                                    
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end about-us-section-s2 -->
+
+
+        <!-- start services-section-s2 -->
+        <section id="services" style="background: linear-gradient(145deg, #e74c3c, #c0392b); padding: 100px 0; font-family: 'Poppins', sans-serif;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; margin-bottom: 60px; color: #fff;">
+            <h2 style="font-size: 2.5rem; font-weight: 700;">
+                Service <span style="color: #ffeaa7;">Private Business Management Consulting</span>
+            </h2>
+            </div>
+
+            <div class="service-grid-wrapper">
+            <!-- Service Card -->
+            <div class="service-card">
+                <img src="https://img.freepik.com/free-photo/person-using-tablet_53876-13420.jpg" alt="Startup">
+                <div class="card-content">
+                <div class="icon"><i class="fi flaticon-solar-energy"></i></div>
+                <h3>Startup</h3>
+                <p>Brainstorming and validating business ideas</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://img.freepik.com/free-photo/business-people-shaking-hands-agreement_53876-20846.jpg" alt="New Ventures">
+                <div class="card-content">
+                <div class="icon"><i class="fi flaticon-plug"></i></div>
+                <h3>New Ventures</h3>
+                <p>Business entity formation: LLC, C-Corp, S-Corp & more</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150061967.jpg" alt="Tech Ventures">
+                <div class="card-content">
+                <div class="icon"><i class="fi flaticon-oil-barrel"></i></div>
+                <h3>Tech Ventures</h3>
+                <p>On-going accountability and planning support</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://img.freepik.com/free-photo/asian-young-male-wearing-wearable-goggle-headset-virtual-online-meeting-digital-space-working-with-3d-augmented-dimension-homecyber-virtual-working-with-virtual-vr-goggle-pc-desktop-device_609648-2614.jpg" alt="Emerging Businesses">
+                <div class="card-content">
+                <div class="icon"><i class="fi flaticon-oil-1"></i></div>
+                <h3>Emerging Businesses</h3>
+                <p>Strategy sessions to evaluate growth opportunities</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://img.freepik.com/free-photo/business-concept-with-team-close-up_23-2149151159.jpg" alt="New Enterprises">
+                <div class="card-content">
+                <div class="icon"><i class="fi flaticon-truck"></i></div>
+                <h3>New Enterprises</h3>
+                <p>Personalized business audits</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://img.freepik.com/free-photo/business-people-blue-background_53876-101889.jpg" alt="Small Businesses">
+                <div class="card-content">
+                <div class="icon"><i class="fi flaticon-factory"></i></div>
+                <h3>Small Businesses</h3>
+                <p>Support in employee retention, customer engagement, and operations</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+        <!-- end services-section-s2 -->
+
+
+        <!-- start contact-section -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="left-col">
+                            <div class="img-holder">
+                                <img src="assets/images/women.png" alt>
+                                <div class="call-back">
+                                    <h3>500+</h3><span>Call we <br>Back</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="contact-form">
+                            <div class="section-title">
+                                <span>Contact us</span>
+                                <h2>You can contact us, <span>if you have any query</span></h2>
+                            </div>
+                            <form method="post" class="contact-validation-active" id="contact-form-main">
+                                <div>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Name*">
+                                </div>
+                                <div>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email*">
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone*">
+                                </div>
+                                <div>
+                                    <select name="subject" class="form-control">
+                                        <option disabled="disabled" selected>Contact subject</option>
+                                        <option>Start up</option>
+                                        <option>Business Consult</option>
+                                        <option>Tech Ventures</option>
+                                    </select>
+                                </div>
+                                <div class="fullwidth">
+                                    <textarea class="form-control" name="note"  id="note" placeholder="Case Description..."></textarea>
+                                </div>
+                                <div class="submit-area">
+                                    <button type="submit" class="submit-btn">Submit Now</button>
+                                    <div id="loader">
+                                        <i class="ti-reload"></i>
+                                    </div>
+                                </div>
+                                <div class="clearfix error-handling-messages">
+                                    <div id="success">Thank you</div>
+                                    <div id="error"> Error occurred while sending email. Please try again later. </div>
+                                </div>
+                            </form>
+                        </div>                            
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end contact-section -->
+
+
+        <!-- start cta-section-s2 -->
+        <section class="cta-section-s2">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2">
+                        <div class="cta-details">
+                            <p>Uncovering Gold in Every Business</p>
+                            <h2>Tapper Light Solutions  </h2>
+                            <a href="#" class="theme-btn">Book an Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end cta-section-s2 -->
+
+
+        <!-- start latest-projects-section-s2 -->
+        <section class="latest-projects-section-s2 section-padding" id="test">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3">
+                        <div class="section-title-s4">
+                            <span>Projects</span>
+                            <h2>See Latest Projects <span>For our client</span></h2>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-area">
+                <div class="team-grids projects-slider">
+                    <div class="grid">
+                        <div class="inner">
+                            <div class="img-holder">
+                                <img src="https://img.freepik.com/premium-photo/businessman-against-buildings-business-concept_85869-2516.jpg?w=740" alt>
+                            </div>
+                            <div class="details">
+                                <div class="arrow"><a href="#"><i class="fi flaticon-next"></i></a></div>
+                                <div class="info">
+                                    <h3><a href="#">Asian Industrial Project</a></h3>
+                                    <p class="cat">Industry, Corporate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="inner">
+                            <div class="img-holder">
+                                <img src="https://img.freepik.com/free-photo/team-working-together-project_23-2149273739.jpg?t=st=1744881508~exp=1744885108~hmac=8037d93a1ea5e66b058623e9e015a72fe8ad803043d775247aa4d44a21bcda8e&w=740" alt>
+                            </div>
+                            <div class="details">
+                                <div class="arrow"><a href="#"><i class="fi flaticon-next"></i></a></div>
+                                <div class="info">
+                                    <h3><a href="#">Asian Industrial Project</a></h3>
+                                    <p class="cat">Industry, Corporate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="inner">
+                            <div class="img-holder">
+                                <img src="https://img.freepik.com/free-photo/business-partners-together-office_1303-25417.jpg?t=st=1744881513~exp=1744885113~hmac=960902ce8263fdbb463172a5e16b42fee888880bcdcd4a6868778c1116c218f1&w=740" alt>
+                            </div>
+                            <div class="details">
+                                <div class="arrow"><a href="#"><i class="fi flaticon-next"></i></a></div>
+                                <div class="info">
+                                    <h3><a href="#">Asian Industrial Project</a></h3>
+                                    <p class="cat">Industry, Corporate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="inner">
+                            <div class="img-holder">
+                                <img src="https://img.freepik.com/free-photo/business-partners_1098-17974.jpg?t=st=1744881522~exp=1744885122~hmac=d76fd0e140176ffdc71218478ff4e3716446e235a4e36d5ab1f7a645dd08110e&w=740" alt>
+                            </div>
+                            <div class="details">
+                                <div class="arrow"><a href="#"><i class="fi flaticon-next"></i></a></div>
+                                <div class="info">
+                                    <h3><a href="#">Asian Industrial Project</a></h3>
+                                    <p class="cat">Industry, Corporate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="inner">
+                            <div class="img-holder">
+                                <img src="https://img.freepik.com/free-photo/two-young-businessman-having-successful-meeting-restaurant_158595-5333.jpg?t=st=1744881531~exp=1744885131~hmac=c72d9833471f57c0d6ecb43584ccd699180c184e27ca7ca61651fc6b37f872e3&w=740" alt>
+                            </div>
+                            <div class="details">
+                                <div class="arrow"><a href="#"><i class="fi flaticon-next"></i></a></div>
+                                <div class="info">
+                                    <h3><a href="#">Asian Industrial Project</a></h3>
+                                    <p class="cat">Industry, Corporate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+            </div>
+        </section>
+        <!-- end latest-projects-section-s2 -->
+
+
+        <!-- start why-choose-us-section -->
+        <section class="why-choose-us-section section-padding p-t-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="inner-area">
+                            <div class="section-title">
+                                <span>Why Choose Tapper Light Solutions</span>
+                                <h2>Decades of Insight,   <span>Years of Impact</span></h2>
+                            </div>
+                            <div class="details">
+                            <p>We’ve walked the walk—from humble business roots to leading roles across startups, corporates, nonprofits, and government agencies. Our approach blends human understanding with strategic execution.</p>
+
+                            <div class="skills modern-skills">
+                                <!-- Production -->
+                                <div class="skill-box" style="flex: 1 1 220px; background: #ff4400; padding: 20px; border-radius: 12px; text-align: center; color: #fff; transition: transform 0.3s ease;">
+                                    <div class="icon" style="margin-bottom: 15px; font-size: 40px; color: #ffffff;">
+                                        <i class="fas fa-industry"></i>
+                                    </div>
+                                    <h6 style="font-size: 18px; font-weight: 600;">Production</h6>
+                                    <p style="font-size: 15px;">Streamlined systems ensuring consistent quality and scalability.</p>
+                                </div>
+
+                                <!-- Business Optimization -->
+                                <div class="skill-box" style="flex: 1 1 220px; background: #ff4400; padding: 20px; border-radius: 12px; text-align: center; color: #fff; transition: transform 0.3s ease;">
+                                    <div class="icon" style="margin-bottom: 15px; font-size: 40px; color: #ffffff;">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h6 style="font-size: 18px; font-weight: 600;">Business Optimization</h6>
+                                    <p style="font-size: 15px;">Enhancing workflows and maximizing operational efficiency.</p>
+                                </div>
+
+                                <!-- Strategic Consulting -->
+                                <div class="skill-box" style="flex: 1 1 220px; background: #ff4400; padding: 20px; border-radius: 12px; text-align: center; color: #fff; transition: transform 0.3s ease;">
+                                    <div class="icon" style="margin-bottom: 15px; font-size: 40px; color: #ffffff;">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <h6 style="font-size: 18px; font-weight: 600;">Strategic Consulting</h6>
+                                    <p style="font-size: 15px;">Tailored guidance for growth, scalability, and vision execution.</p>
+                                </div>
+
+                                <!-- Client Satisfaction -->
+                                <div class="skill-box" style="flex: 1 1 220px; background: #ff4400; padding: 20px; border-radius: 12px; text-align: center; color: #fff; transition: transform 0.3s ease;">
+                                    <div class="icon" style="margin-bottom: 15px; font-size: 40px; color: #ffffff;">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h6 style="font-size: 18px; font-weight: 600;">Client Satisfaction</h6>
+                                    <p style="font-size: 15px;">Trusted partnerships built on delivering value and results.</p>
+                                </div>
+                            </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="img-holder">
+                            <img src="https://img.freepik.com/free-photo/view-professional-handshake-business-people_23-2150917018.jpg?t=st=1744881694~exp=1744885294~hmac=684b72f13ff9c29dc83de78e8418f6e08273a30a6c6701ba48e08f991426380f&w=740" alt>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end why-choose-us-section -->
+
+
+        
+
+        
+        <!-- start partners-section -->
+         
+        <!-- end partners-section -->
+
+        
+        <!-- start testimonials-section -->
+        <!--<section class="testimonials-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="testimonial-grids testimonials-slider">
+                            <div class="grid">
+                                <div class="client-info">
+                                    <div class="client-pic">
+                                        <img src="assets/images/testimonials/img-1.jpg" alt>
+                                    </div>
+                                    <h4>Jhon Dow</h4>
+                                    <span>Manager of Demok</span>
+                                </div>
+                                <div class="client-quote">
+                                    <p>"Tapper Light Solutions transformed the way I viewed my own business. Their insight helped me discover hidden potential and guided me with strategies that actually work. It felt like striking gold!"</p>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="client-info">
+                                    <div class="client-pic">
+                                        <img src="assets/images/testimonials/img-2.jpg" alt>
+                                    </div>
+                                    <h4>Jhon Dow</h4>
+                                    <span>Manager of Demok</span>
+                                </div>
+                                <div class="client-quote">
+                                    <p>"What impressed me most was how personalized the experience felt. They truly listened, understood our goals, and helped us scale with confidence. Tapper Light is more than a consultancy—they’re partners."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>-->
+        <!-- end testimonials-section -->
+
+
+         
+
+        <!-- start site-footer -->
+        <footer class="site-footer" style="background-color: black;">
+            <div class="upper-footer">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <img style="height: 50px;" src="./assets/images/logo.png" alt="">
+                            <div class="widget about-widget">
+                                
+                                 <br>
+                                <p>At Tapper Light Solutions, we believe every business holds hidden potential. With decades of multi-industry experience, we’re here to   turn your vision into real results.</p>
+                                 
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget link-widget">
+                                <div class="widget-title">
+                                    <h3>Important Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    
+                                    <li><a href="#">Our services</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Provacu Policy</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget contact-widget service-link-widget">
+                                <div class="widget-title">
+                                    <h3>Address Location</h3>
+                                </div>
+                                <ul>
+                                    <li>1401 Pennsylvania Avenue Suite 105
+                                        Wilmington, Delaware 19806
+                                         
+                                        </li>
+                                    <li>Phone:  (888) 554-6965</li>
+                                 
+                                    <li> Admin@TapperLightSolutions.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget newsletter-widget">
+                                <div class="widget-title">
+                                    <h3>Newsletter</h3>
+                                </div>
+                                <p>You will be notified when somthing new will be appear.</p>
+                                <form>
+                                    <div class="input-1">
+                                        <input type="email" class="form-control" placeholder="Email Address *" required>
+                                    </div>
+                                    <div class="submit clearfix">
+                                        <button type="submit"><i class="ti-email"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+            </div>
+            <div class="lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="separator"></div>
+                        <div class="col col-xs-12">
+                            <p class="copyright">Copyright &copy; 2025 Tapper Light Solutions. All rights reserved.</p>
+                            <div class="short-links">
+                                <ul>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Terms of Use</a></li>
+                                    <li><a href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end site-footer -->
+
+    </div>
+    <!-- end of page-wrapper -->
+
+
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins for this template -->
+    <script src="assets/js/jquery-plugin-collection.js"></script>
+
+    <!-- Custom script for this template -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+<!-- Mirrored from quomodosoft.com/html/nictorys/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Apr 2025 06:24:34 GMT -->
+</html>
