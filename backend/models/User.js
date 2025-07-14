@@ -14,6 +14,11 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: false, // allows Google login
   },
+  role: {
+    type: String,
+    enum: ['user', 'admin'],
+    default: 'user'
+  },
 });
 
 module.exports = mongoose.model("User", UserSchema);

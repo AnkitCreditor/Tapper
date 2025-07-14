@@ -28,7 +28,7 @@ router.post("/signup", async (req, res) => {
 
     await user.save();
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
 
@@ -50,7 +50,7 @@ router.post("/login", async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password || "");
     if (!isMatch) return res.status(400).json({ msg: "Invalid credentials" });
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
 
@@ -87,7 +87,7 @@ router.post("/google", async (req, res) => {
       await user.save();
     }
 
-    const jwtToken = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+    const jwtToken = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
 
@@ -96,6 +96,30 @@ router.post("/google", async (req, res) => {
     console.error("Google login failed:", err.message);
     res.status(401).json({ msg: "Google login failed" });
   }
+});
+
+// LOGOUT
+router.post("/logout", (req, res) => {
+    try {
+        // Since JWT is stateless, logout is typically handled client-side
+        // by removing the token from storage. This endpoint can be used
+        // for logging purposes or future token blacklisting.
+        
+        // Log the logout attempt (you can add more logging logic here)
+        console.log('User logout attempted');
+        
+        res.json({ 
+            success: true,
+            msg: "Logged out successfully",
+            timestamp: new Date().toISOString()
+        });
+    } catch (err) {
+        console.error('Logout Error:', err.message);
+        res.status(500).json({ 
+            success: false,
+            msg: "Logout failed" 
+        });
+    }
 });
 
 module.exports = router;
